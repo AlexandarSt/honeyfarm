@@ -1,0 +1,52 @@
+$target-width: 560px;
+
+.contact{
+    text-align: center;
+    
+    .contact-form{
+        // width: 50%;
+        display: inline-block;
+        margin: 100px 100px 0 50px;
+        text-align: left;
+    
+        @media screen and (max-width: 800px){
+            width: unset;
+            margin: 100px 10px;
+        }
+    
+        textarea{
+            resize: none;
+            @media (max-width: $target-width){
+                width: 400px;
+            }
+            @media screen and (max-width: 800px){
+                width: 280px;
+            }
+        }
+
+        .custom-button{
+            display: block;
+        }
+    
+    }
+
+    .google-maps{
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 100px 50px 0 50px;
+
+        .info{
+            background-color: #F9D442;
+            padding: 35px;
+            border: 1px solid grey;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        @media screen and (max-width: 1396px){
+            width: 70%;
+            margin: 20px 50px 0 50px;
+        }
+    }
+}

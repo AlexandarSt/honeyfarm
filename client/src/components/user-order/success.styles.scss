@@ -1,0 +1,8 @@
+.success{
+    margin-top: 100px;
+    text-align: center;
+    
+    @media screen and (max-width: 800px){
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,45 @@
+.form-error{
+    color: red;
+    margin-top: -25px;
+    text-align: left;
+}
+
+.form{
+    // margin: 150px 30% 0 37%;
+    margin-top: 150px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    display: inline-block;
+
+    @media screen and (max-width: 800px){
+        margin: 100px 10px;
+
+    }
+}
+    textarea{
+        border: 1px solid grey;
+        resize: none;
+        font-family: 'Open Sans Condensed';
+        font-size: 16px;
+        margin: 10px 0 20px 0;
+
+        @media screen and (max-width: 800px) {
+            font-size: 12px;
+        }
+    }
+    .custom-button{
+        display: inline;
+
+        @media screen and (max-width: 800px){
+            opacity: 0.9;
+            min-width: unset;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+    }
+
+        #forward{
+            margin-left: 10px;
+        }

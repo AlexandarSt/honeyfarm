@@ -1,0 +1,46 @@
+.parallax{
+    background: url('../../assets/Honey-Oats-Stock-Image.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 98.9vw;
+}
+.parallax-2{
+    background: url('../../assets/Honey-Oats-Stock-Image-2.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+    width: 98.9vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    text-shadow: 2px 2px grayscale($color: gray);
+
+    @media screen and (max-width: 800px){
+        p{
+            text-align: center;
+            padding: 5px;
+        }
+    }
+}        
+.about-us{
+    font-weight: 400;
+    font-size: larger;
+    color: #4a4a4a;
+    text-align: justify;
+    padding: 30px 50px 50px 50px;
+    
+    h1{
+        text-align: center;
+    }
+
+    .feature-divider {
+        border: solid 2px;
+        display: block;
+        width: 70px;
+        margin: 25px auto;
+        border-color: #363636;
+    }
+}

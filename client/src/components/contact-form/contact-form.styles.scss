@@ -1,0 +1,28 @@
+// $target-width: 560px;
+
+// .contact-form{
+//     width: 30vw;
+//     display: flex;
+//     flex-direction: column;
+//     margin: 100px 0 0 50px;
+
+//     @media screen and (max-width: 800px){
+//         width: unset;
+//         margin: 100px 10px;
+
+//         .custom-button{
+//             display: block;
+//         }
+//     }
+
+//     textarea{
+//         resize: none;
+//         @media (max-width: $target-width){
+//             width: 400px;
+//         }
+//         @media screen and (max-width: 800px){
+//             width: 280px;
+//         }
+//     }
+
+// }

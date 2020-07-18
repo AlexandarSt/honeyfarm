@@ -19,6 +19,14 @@
     height: 200px;
   }
 
+  @media only screen and
+  (max-width: 850px) and 
+  (min-height: 250px) and 
+  (max-height: 450px)
+  {
+    height: 180px;
+  }
+
   .empty-message {
     font-size: 18px;
     margin: 50px auto;

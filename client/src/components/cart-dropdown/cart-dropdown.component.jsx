@@ -34,7 +34,7 @@ const CartDropdown = ({cartItems, history, dispatch}) => {
                 }
             }  
         }>
-        IDITE NA KASU
+        NARUČITE
         </CustomButton>
         <Modal 
             isOpen={modalIsOpen} 

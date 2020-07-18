@@ -52,7 +52,7 @@ app.post('/order/order', (req, response) => {
   
 
   const msg = {
-    to: process.env.MAIL,
+    to: [process.env.MAIL,`${email}`],
     from: 'office@honeyfarm.com',
     templateId: 'd-dee0eb402e8a49aaa7422f1337be50ec',
     dynamic_template_data: {

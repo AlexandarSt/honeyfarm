@@ -4,18 +4,25 @@
     text-align: left;
 }
 
+.bee{
+    text-align: center;
+    background: url('../../assets/bees.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}    
+ 
 .form{
     // margin: 150px 30% 0 37%;
-    margin-top: 150px;
+    margin: 150px;
     border: 1px solid grey;
     border-radius: 15px;
     text-align: center;
     padding: 20px;
     display: inline-block;
+    background: white;
 
     @media screen and (max-width: 800px){
         margin: 100px 10px;
-
     }
 }
     textarea{
@@ -39,7 +46,7 @@
             font-size: 14px;
         }
     }
-
         #forward{
             margin-left: 10px;
         }
+     

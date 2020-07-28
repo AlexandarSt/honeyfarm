@@ -63,44 +63,46 @@ const Confirm = ({cartItems, total, nextStep, prevStep, values}) => {
         }
 
     return (
-    <div className='ordr'>   
-        <div className='personal-data'>
-            <h2>Podaci za dostavu</h2>
-            <h4 style={{ borderBottom: '1px solid grey', display: 'inline'}}>Ime i prezime</h4>
-            <p>{values.firstName} {values.lastName}</p>
-            <h4 style={{ borderBottom: '1px solid grey', display: 'inline'}}>Adresa</h4>
-            <p>{values.address}</p>
-            <h4 style={{ borderBottom: '1px solid grey', display: 'inline'}}>Grad</h4>
-            <p>{values.city}</p>
-            <h4 style={{ borderBottom: '1px solid grey', display: 'inline'}}>Telefon</h4>
-            <p>{values.phone}</p>
-            <h4 style={{ borderBottom: '1px solid grey', display: 'inline'}}>Email</h4>
-            <p>{values.email}</p>
-            <h4 style={{ borderBottom: '1px solid grey', display: 'inline'}}>Dodatna napomena</h4>
-            <textarea rows='7' cols='30' defaultValue={values.text}></textarea>
+    <div className='bee'>    
+        <div className='ordr'>   
+            <div className='personal-data'>
+                <h2>Podaci za dostavu</h2>
+                <h4 style={{ borderBottom: '1px solid grey', display: 'inline'}}>Ime i prezime</h4>
+                <p>{values.firstName} {values.lastName}</p>
+                <h4 style={{ borderBottom: '1px solid grey', display: 'inline'}}>Adresa</h4>
+                <p>{values.address}</p>
+                <h4 style={{ borderBottom: '1px solid grey', display: 'inline'}}>Grad</h4>
+                <p>{values.city}</p>
+                <h4 style={{ borderBottom: '1px solid grey', display: 'inline'}}>Telefon</h4>
+                <p>{values.phone}</p>
+                <h4 style={{ borderBottom: '1px solid grey', display: 'inline'}}>Email</h4>
+                <p>{values.email}</p>
+                <h4 style={{ borderBottom: '1px solid grey', display: 'inline'}}>Dodatna napomena</h4>
+                <textarea rows='7' cols='32' defaultValue={values.text}></textarea>
+            </div>
+            
+            <div className='order'>
+                <h2>Artikli za naručivanje</h2>
+                {
+                    cartItems.map(cartItem => (
+                        <OrderItems key={cartItem.id} cartItem={cartItem} />
+                    ))
+                }
+                <h2>Ukupno: {total} din</h2>
+            </div>
+            
+            <div className='nav-button'>
+                <CustomButton onClick={prevStep}>
+                    Nazad
+                </CustomButton>
+                <CustomButton id="forward" onClick={(e) =>{
+                    handleSubmit(e)
+                    nextStep()
+                }}>
+                    Pošalji narudžbinu
+                </CustomButton>
+            </div>   
         </div>
-        
-        <div className='order'>
-            <h2>Artikli za naručivanje</h2>
-            {
-                cartItems.map(cartItem => (
-                    <OrderItems key={cartItem.id} cartItem={cartItem} />
-                ))
-            }
-            <h2>Ukupno: {total} din</h2>
-        </div>
-        
-        <div className='nav-button'>
-            <CustomButton onClick={prevStep}>
-                Nazad
-            </CustomButton>
-            <CustomButton id="forward" onClick={(e) =>{
-                handleSubmit(e)
-                nextStep()
-            }}>
-                Pošalji narudžbinu
-            </CustomButton>
-        </div>   
     </div> 
     )
 }

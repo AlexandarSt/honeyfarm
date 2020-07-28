@@ -31,7 +31,7 @@ const UserDetails = ({values, handleChange, handleSubmit, errors, isSubmitting})
     // } = Validation(INITIAL_STATE, validateAuth, nextStep)
 
     return (
-    <div style={{'textAlign':'center'}}>
+    <div className='bee'>
         <div className='form'>
             <h1>Podaci za pošiljku</h1>
             <p>Molimo Vas da unesete kontakt podatke i adresu na koju zelite da bude isporuka </p>

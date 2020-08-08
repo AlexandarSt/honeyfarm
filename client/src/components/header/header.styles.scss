@@ -43,10 +43,18 @@
     .option {
       padding: 10px 15px;
 
-      &:active{
+      &:active {
         -moz-outline-style: none;
         -webkit-outline-style: none;
         outline-style: none;
+        outline: 0;
+      }
+
+      &:focus {
+        -moz-outline-style: none;
+        -webkit-outline-style: none;
+        outline-style: none;
+        outline: 0;
       }
     }
   }

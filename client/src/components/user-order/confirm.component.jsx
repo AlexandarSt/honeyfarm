@@ -78,7 +78,7 @@ const Confirm = ({cartItems, total, nextStep, prevStep, values}) => {
                 <h4 style={{ borderBottom: '1px solid grey', display: 'inline'}}>Email</h4>
                 <p>{values.email}</p>
                 <h4 style={{ borderBottom: '1px solid grey', display: 'inline'}}>Dodatna napomena</h4>
-                <textarea rows='7' cols='32' defaultValue={values.text}></textarea>
+                <p>{values.text}</p>
             </div>
             
             <div className='order'>

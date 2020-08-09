@@ -62,6 +62,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 18px;
+    text-align: center;
 
     @media screen and (max-width: 800px){
       display: unset;
@@ -74,7 +75,7 @@
     }
 
     .price {
-      width: 10%;
+      width: 50%;
 
       @media screen and (max-width: 800px){
         margin-left: 10px;

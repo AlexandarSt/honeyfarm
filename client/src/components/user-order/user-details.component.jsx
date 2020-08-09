@@ -85,7 +85,7 @@ const UserDetails = ({values, handleChange, handleSubmit, errors, isSubmitting})
                         value={values.text} 
                         onChange={handleChange}
                         rows="7" 
-                        cols="60"
+                        cols="40"
                         maxLength="500"
                         placeholder="Dodatna uputstva za isporuku (opciono) "  
                         >       

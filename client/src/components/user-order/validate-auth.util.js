@@ -2,16 +2,20 @@ export const validateAuth = (values) => {
         const errors = {};
         if (!values.firstName) {
           errors.firstName = 'Unesite vaše ime';
-        } else if (!/^([a-zA-ZĆ-ćČ-čĐ-đŠ-šŽ-žЉ-љЊ-њР-рЗ-зУ-уИ-иП-пШ-шЂ-ђЖ-жС-сД-дФ-фГ-гХ-хЛ-лЧ-чЋ-ћЏ-џЦ-цВ-вБ-бН-н]+\s)*[a-zA-ZĆ-ćČ-čĐ-đŠ-šŽ-žЉ-љЊ-њР-рЗ-зУ-уИ-иП-пШ-шЂ-ђЖ-жС-сД-дФ-фГ-гХ-хЛ-лЧ-чЋ-ћЏ-џЦ-цВ-вБ-бН-н]+$/.test(values.firstName)) {
+        } else if (/[.;,<>$&!~`^*:"}{\][|\\?%0-9]/.test(values.firstName)) {
           errors.firstName = 'Unesite ispravno vaše ime';
         } else if (!values.lastName) {
           errors.lastName = 'Unesite vaše prezime';
-        } else if (!/^([a-zA-ZĆ-ćČ-čĐ-đŠ-šŽ-žЉ-љЊ-њР-рЗ-зУ-уИ-иП-пШ-шЂ-ђЖ-жС-сД-дФ-фГ-гХ-хЛ-лЧ-чЋ-ћЏ-џЦ-цВ-вБ-бН-н]+\s)*[a-zA-ZĆ-ćČ-čĐ-đŠ-šŽ-žЉ-љЊ-њР-рЗ-зУ-уИ-иП-пШ-шЂ-ђЖ-жС-сД-дФ-фГ-гХ-хЛ-лЧ-чЋ-ћЏ-џЦ-цВ-вБ-бН-н]+$/.test(values.lastName)) {
+        } else if (/[.;,<>$&!~`^*:"}{\][|\\?%0-9]/.test(values.lastName)) {
           errors.lastName = 'Unesite ispravno vaše prezime';
         } else if (!values.address) {
           errors.address = 'Unesite vašu adresu';
+        } else if (/[;<>$!~`^*:}{\][|\\?%]/.test(values.address)) {
+          errors.address = 'Unesite ispravnu adresu';
         } else if (!values.city) {
           errors.city = 'Unesite vaš grad';
+        } else if (/[.;,<>$&!~`^*:"}{\][|\\?%0-9]/.test(values.city)) {
+          errors.city = 'Unesite ispravno ime grada';
         } else if (!values.phone) {
           errors.phone = 'Unesite vaš kontakt telefon';
         } else if (!/^[0-9\b]+$/.test(values.phone)) {
@@ -28,6 +32,4 @@ export const validateAuth = (values) => {
       
     }
 
-    // /^[a-zA-Z\p{Cyrillic}\d\s\-]+$/u
-
-    // Ć-ćČ-čĐ-đŠ-šŽ-ž
+    

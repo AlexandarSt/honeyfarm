@@ -6,25 +6,25 @@ const SHOP_DATA = {
     items: [
       {
         id: 1,
-        name: 'Livadski 100gr',
+        name: 'Livadski 100g',
         imageUrl: 'https://i.etsystatic.com/16717838/r/il/0ce25e/1433373025/il_570xN.1433373025_639k.jpg',
         price: 250
       },
       {
         id: 2,
-        name: 'Livadski 200gr',
+        name: 'Livadski 200g',
         imageUrl: 'https://i.etsystatic.com/16717838/r/il/0ce25e/1433373025/il_570xN.1433373025_639k.jpg',
         price: 500
       },
       {
         id: 3,
-        name: 'Livadski 300gr',
+        name: 'Livadski 300g',
         imageUrl: 'https://i.etsystatic.com/16717838/r/il/0ce25e/1433373025/il_570xN.1433373025_639k.jpg',
         price: 700
       },
       {
         id: 4,
-        name: 'Livadski 500gr',
+        name: 'Livadski 500g',
         imageUrl: 'https://i.etsystatic.com/16717838/r/il/0ce25e/1433373025/il_570xN.1433373025_639k.jpg',
         price: 1000
       },
@@ -55,25 +55,25 @@ const SHOP_DATA = {
     items: [
       {
         id: 10,
-        name: 'Šumski 100gr',
+        name: 'Šumski 100g',
         imageUrl: 'https://www.carterspackaging.com/media/3_2529_Original_1lb_Honey_Jar_with_Gold_Screw_Lid_2d6d4f.jpg',
         price: 220
       },
       {
         id: 11,
-        name: 'Šumski 200gr',
+        name: 'Šumski 200g',
         imageUrl: 'https://www.carterspackaging.com/media/3_2529_Original_1lb_Honey_Jar_with_Gold_Screw_Lid_2d6d4f.jpg',
         price: 280
       },
       {
         id: 12,
-        name: 'Šumski 300gr',
+        name: 'Šumski 300g',
         imageUrl: 'https://www.carterspackaging.com/media/3_2529_Original_1lb_Honey_Jar_with_Gold_Screw_Lid_2d6d4f.jpg',
         price: 350
       },
       {
         id: 13,
-        name: 'Šumski 500gr',
+        name: 'Šumski 500g',
         imageUrl: 'https://www.carterspackaging.com/media/3_2529_Original_1lb_Honey_Jar_with_Gold_Screw_Lid_2d6d4f.jpg',
         price: 800
       },
@@ -110,25 +110,25 @@ const SHOP_DATA = {
     items: [
       {
         id: 18,
-        name: 'Bagremov 100gr',
+        name: 'Bagremov 100g',
         imageUrl: 'https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20Image%20Professionals%20GmbH,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1501543513/awrnxdljxtwiuxc9oxxr.jpg',
         price: 125
       },
       {
         id: 19,
-        name: 'Bagremov 200gr',
+        name: 'Bagremov 200g',
         imageUrl: 'https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20Image%20Professionals%20GmbH,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1501543513/awrnxdljxtwiuxc9oxxr.jpg',
         price: 250
       },
       {
         id: 20,
-        name: 'Bagremov 300gr',
+        name: 'Bagremov 300g',
         imageUrl: 'https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20Image%20Professionals%20GmbH,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1501543513/awrnxdljxtwiuxc9oxxr.jpg',
         price: 400
       },
       {
         id: 21,
-        name: 'Bagremov 500gr',
+        name: 'Bagremov 500g',
         imageUrl: 'https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20Image%20Professionals%20GmbH,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1501543513/awrnxdljxtwiuxc9oxxr.jpg',
         price: 650
       },
@@ -147,25 +147,25 @@ const SHOP_DATA = {
     items: [
       {
         id: 23,
-        name: 'Med sa saćem 100gr',
+        name: 'Med sa saćem 100g',
         imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81w70bVvRbL._SL1500_.jpg',
         price: 250
       },
       {
         id: 24,
-        name: 'Med sa saćem 200gr',
+        name: 'Med sa saćem 200g',
         imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81w70bVvRbL._SL1500_.jpg',
         price: 500
       },
       {
         id: 25,
-        name: 'Med sa saćem 300gr',
+        name: 'Med sa saćem 300g',
         imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81w70bVvRbL._SL1500_.jpg',
         price: 800
       },
       {
         id: 26,
-        name: 'Med sa saćem 500gr',
+        name: 'Med sa saćem 500g',
         imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81w70bVvRbL._SL1500_.jpg',
         price: 1000
       },
@@ -196,39 +196,39 @@ const SHOP_DATA = {
     items: [
       {
         id: 30,
-        name: 'Rtanjski 100gr',
+        name: 'Rtanjski 100g',
         imageUrl: 'https://www.shoppe33.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acacia_honey.jpg',
-        price: 325
+        price: 150
       },
       {
         id: 31,
-        name: 'Rtanjski 200gr',
+        name: 'Rtanjski 200g',
         imageUrl: 'https://www.shoppe33.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acacia_honey.jpg',
-        price: 20
+        price: 200
       },
       {
         id: 32,
-        name: 'Rtanjski 300gr',
+        name: 'Rtanjski 300g',
         imageUrl: 'https://www.shoppe33.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acacia_honey.jpg',
-        price: 25
+        price: 250
       },
       {
         id: 33,
-        name: 'Rtanjski 500gr',
+        name: 'Rtanjski 500g',
         imageUrl: 'https://www.shoppe33.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acacia_honey.jpg',
-        price: 25
+        price: 350
       },
       {
         id: 34,
         name: 'Rtanjski 1kg',
         imageUrl: 'https://www.shoppe33.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acacia_honey.jpg',
-        price: 40
+        price: 800
       },
       {
         id: 35,
         name: 'Rtanjski 2kg',
         imageUrl: 'https://www.shoppe33.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acacia_honey.jpg',
-        price: 25
+        price: 1500
       }
     ]
   }

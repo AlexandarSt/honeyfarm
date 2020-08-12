@@ -2,12 +2,12 @@ export const validateAuth = (values) => {
         const errors = {};
         if (!values.firstName) {
           errors.firstName = 'Unesite vaše ime';
-        } else if (!/^[a-zA-Z]+$/.test(values.firstName)) {
-          errors.firstName = 'Možete uneti samo slova';
+        } else if (!/^([a-zA-ZĆ-ćČ-čĐ-đŠ-šŽ-žЉ-љЊ-њР-рЗ-зУ-уИ-иП-пШ-шЂ-ђЖ-жС-сД-дФ-фГ-гХ-хЛ-лЧ-чЋ-ћЏ-џЦ-цВ-вБ-бН-н]+\s)*[a-zA-ZĆ-ćČ-čĐ-đŠ-šŽ-žЉ-љЊ-њР-рЗ-зУ-уИ-иП-пШ-шЂ-ђЖ-жС-сД-дФ-фГ-гХ-хЛ-лЧ-чЋ-ћЏ-џЦ-цВ-вБ-бН-н]+$/.test(values.firstName)) {
+          errors.firstName = 'Unesite ispravno vaše ime';
         } else if (!values.lastName) {
           errors.lastName = 'Unesite vaše prezime';
-        } else if (!/^[a-zA-Z]+$/.test(values.lastName)) {
-          errors.lastName = 'Možete uneti samo slova';
+        } else if (!/^([a-zA-ZĆ-ćČ-čĐ-đŠ-šŽ-žЉ-љЊ-њР-рЗ-зУ-уИ-иП-пШ-шЂ-ђЖ-жС-сД-дФ-фГ-гХ-хЛ-лЧ-чЋ-ћЏ-џЦ-цВ-вБ-бН-н]+\s)*[a-zA-ZĆ-ćČ-čĐ-đŠ-šŽ-žЉ-љЊ-њР-рЗ-зУ-уИ-иП-пШ-шЂ-ђЖ-жС-сД-дФ-фГ-гХ-хЛ-лЧ-чЋ-ћЏ-џЦ-цВ-вБ-бН-н]+$/.test(values.lastName)) {
+          errors.lastName = 'Unesite ispravno vaše prezime';
         } else if (!values.address) {
           errors.address = 'Unesite vašu adresu';
         } else if (!values.city) {
@@ -27,3 +27,7 @@ export const validateAuth = (values) => {
         return errors;
       
     }
+
+    // /^[a-zA-Z\p{Cyrillic}\d\s\-]+$/u
+
+    // Ć-ćČ-čĐ-đŠ-šŽ-ž

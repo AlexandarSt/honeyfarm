@@ -16,7 +16,7 @@ const Success = ({clearCartAll}) => {
     <div className='success'>
         <h1>Uspešno ste naručili!</h1>
         <br/>
-        <img src="../../assets/success.png" alt="Success" />
+        <img src="success.png" alt="Success" />
         <br/>
         <h4>Vaša narudžbina je uspešno kreirana. Paket će Vam biti poslat u najkracem roku.</h4>
         <h4>Hvala na poverenju!</h4>

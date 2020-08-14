@@ -1,94 +1,116 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
 
 import './contact-form.styles.scss';
 
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
-import axios from 'axios';
+import {validateAuthContact} from './validate-auth-contact.util';
+import { resolveContent } from 'nodemailer/lib/shared';
 
-class ContactForm extends React.Component{
-    constructor(props) {
-        super(props)
 
-        this.state = {
-            name: '',
-            email: '',
-            text: '',
-            error: ''
+const INITIAL_STATE = {
+    firstlastName: '',
+    email: '',
+    text: ''
+}
+
+const ContactForm = () => {
+
+    const [values, setValues] = useState(INITIAL_STATE)
+    const [errors, setErrors] = useState({})
+    const [isSubmitting, setSubmitting] = useState(false)
+
+    useEffect(() => {
+        if(isSubmitting){
+            const noErrors = Object.keys(errors).length === 0
+            if(noErrors){
+                setSubmitting(false)
+                const {firstlastName, email, text} = values
+                const data = {
+                    firstlastName,
+                    email,
+                    text
+                }
+                axios.post('/contact/mail', data)
+                .then(()=>{
+                    console.log('Success! Data has been sent.')
+                })
+                .catch(()=>{
+                    console.log('Failure! Data has NOT been sent.')
+                })
+                setValues(INITIAL_STATE)
+            } else {
+                setSubmitting(false)
+            }
         }
-    }
+    }, [errors])
 
-    handleSubmit = event => {
+    const handleSubmit = event => {
         event.preventDefault()
 
-        const {name, email, text} = this.state
-
-        const data = {
-            name,
-            email,
-            text
-        }
-
-        axios.post('/contact/mail', data)
-        .then(()=>{
-            console.log('Success! Data has been sent.')
-        })
-        .catch(()=>{
-            console.log('Failure! Data has NOT been sent.')
-        })
-
-        this.setState({
-            name: '',
-            email: '',
-            text: ''
-        })
-
+        const validationErrors = validateAuthContact(values)
+        setErrors(validationErrors)
+        setSubmitting(true)
+            
     }
 
-    handleChange = event => {
+    const handleChange = event => {
         const {value, name} = event.target
 
-        this.setState({ [name]: value })
+        setValues({
+            ...values,    
+            [name]: value
+         })
     }
 
-    render() {
-        return(
+    // const handleChange = event => {
+    //     const {value, name} = event.target
+
+    //     setValues({ [name]: value })
+    // }
+
+        return (
+        
             <div>
             <h2>Kontaktirajte nas</h2>
             <span>Posaljite nam vaše sugestije i utiske</span>
 
-            <form onSubmit={this.handleSubmit}>
+
+            <form onSubmit={handleSubmit}>
                 <FormInput 
-                    name='name' 
-                    value={this.state.name} 
-                    handleChange={this.handleChange}
+                    name='firstlastName' 
+                    value={values.firstlastName} 
+                    handleChange={handleChange}
                     label='Ime i Prezime'
-                    required />
+                />
+                {errors.firstlastName && <p className='form-error'>{errors.firstlastName}</p>}      
                 
                 <FormInput 
                     name='email' 
-                    type='email' 
-                    value={this.state.email}
-                    handleChange={this.handleChange}
+                    value={values.email}
+                    handleChange={handleChange}
                     label='Email' 
-                    required />
-                
+                /> 
+                {errors.email && <p className='form-error'>{errors.email}</p>}
+
                 <textarea 
                     name='text' 
-                    value={this.state.text} 
-                    onChange={this.handleChange}
+                    value={values.text} 
+                    onChange={handleChange}
                     rows="10" 
                     cols="75"
                     maxLength="500"
-                    required>
+                >
                 </textarea>
-                <CustomButton type='submit'>
+                {errors.text && <p className='form-error'>{errors.text}</p>}
+    
+                <CustomButton disabled={isSubmitting} type='submit'>
                     Pošalji
                 </CustomButton>
             </form>
             </div>
         )
     }
-}
 
 export default ContactForm;

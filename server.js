@@ -15,7 +15,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
 
 
-// Sendgrid
+// SENDGRID
+
+// Narudzbina
+
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 app.post('/order/order', (req, response) => {
@@ -75,6 +78,9 @@ app.post('/order/order', (req, response) => {
   sgMail.send(msg).then(() => console.log('Email sent succesfully!'))
   .catch((error) => {console.log(error)})
 })
+
+
+// Kontakt
 
 app.post('/contact/mail', (req, response) => {
   

@@ -84,7 +84,7 @@ app.post('/order/order', (req, response) => {
 
 app.post('/contact/mail', (req, response) => {
   
-  const {name, email, text} = req.body;
+  const {firstlastName, email, text} = req.body;
 
   const msg = {
     to: process.env.MAIL,
@@ -92,7 +92,7 @@ app.post('/contact/mail', (req, response) => {
     templateId: 'd-1e2af21564274cf09c47b55a4d113878',
     dynamic_template_data: {
       subject: 'Poruka sa Honey Farm',
-      name: `${name}`,
+      name: `${firstlastName}`,
       email: `${email}`,
       text: `${text}`
     }

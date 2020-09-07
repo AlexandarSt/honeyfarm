@@ -40,35 +40,35 @@ const UserDetails = ({values, handleChange, handleSubmit, errors, isSubmitting})
                         name='firstName'
                         value={values.firstName} 
                         handleChange={handleChange}
-                        label='Ime'
+                        label='Ime*'
                     />
                     {errors.firstName && <p className='form-error'>{errors.firstName}</p>}
                     <FormInput 
                         name='lastName' 
                         value={values.lastName} 
                         handleChange={handleChange}
-                        label='Prezime'
+                        label='Prezime*'
                     />
                     {errors.lastName && <p className='form-error'>{errors.lastName}</p>}
                     <FormInput 
                         name='address' 
                         value={values.address} 
                         handleChange={handleChange}
-                        label='Adresa'
+                        label='Adresa*'
                     />
                     {errors.address && <p className='form-error'>{errors.address}</p>}
                     <FormInput 
                         name='city' 
                         value={values.city} 
                         handleChange={handleChange}
-                        label='Grad'
+                        label='Grad*'
                     />
                     {errors.city && <p className='form-error'>{errors.city}</p>}
                     <FormInput 
                         name='phone' 
                         value={values.phone} 
                         handleChange={handleChange}
-                        label='Telefon'
+                        label='Telefon*'
                     />
                     {errors.phone && <p className='form-error'>{errors.phone}</p>}
                     <FormInput 
@@ -76,7 +76,7 @@ const UserDetails = ({values, handleChange, handleSubmit, errors, isSubmitting})
                         // type='email' 
                         value={values.email}
                         handleChange={handleChange}
-                        label='Email' 
+                        label='Email*' 
                     />
                     {errors.email && <p className='form-error'>{errors.email}</p>}
                     <div className='group'>
@@ -90,6 +90,7 @@ const UserDetails = ({values, handleChange, handleSubmit, errors, isSubmitting})
                         placeholder="Dodatna uputstva za isporuku (opciono) "  
                         >       
                     </textarea>
+                    <p><i>* polja sa zvezdicom su obavezna</i></p>
                     </div>
                     <Link to='/checkout'>
                     <CustomButton id='back'>

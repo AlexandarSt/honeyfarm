@@ -8,7 +8,9 @@ import ContactForm from '../../components/contact-form/contact-form.component';
 
 const Contact = () => (
     <div className='contact'>
-        <div className='contact-form'><ContactForm /></div>    
+        <div className='contact-form'>
+            <ContactForm />
+        </div>    
         <div className='google-maps'>
             <GoogleMaps isMarkerShown />
             <div className='info'>    

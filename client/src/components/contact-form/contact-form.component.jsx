@@ -6,7 +6,6 @@ import './contact-form.styles.scss';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 import {validateAuthContact} from './validate-auth-contact.util';
-import { resolveContent } from 'nodemailer/lib/shared';
 
 
 const INITIAL_STATE = {
